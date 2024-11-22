@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore com Maçãs Detalhada</title>
+    <style>
+        .tree-container {
+            width: 300px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #87CEEB; /* Céu */
+        }
+
+        .tree {
+            width: 100px;
+            height: 200px;
+            background-color: brown;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+        }
+
+        .leaves {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        .apple {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Árvore com Maçãs Detalhada</h1>
+    <div class="tree-container">
+        <div class="tree"></div>
+        <div class="leaves">
+            <div class="apple" style="top: 30px; left: 30px;"></div>
+            <div class="apple" style="top: 80px; left: 180px;"></div>
+            <div class="apple" style="top: 120px; left: 70px;"></div>
+            <div class="apple" style="top: 160px; left: 150px;"></div>
+            <div class="apple" style="top: 200px; left: 100px;"></div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.apple').forEach(function(apple) {
+            apple.addEventListener('click', function() {
+                apple.remove();
+            });
+        });
+    </script>
+</body>
+</html>
